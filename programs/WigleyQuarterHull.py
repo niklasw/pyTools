@@ -1,4 +1,6 @@
 #!/usr/bin/python
+# Code to generate a Wavefront .obj file describing the
+# Wigley hull form
 
 from __future__ import division
 

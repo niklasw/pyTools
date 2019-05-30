@@ -21,7 +21,7 @@ def mkImgPage(imgPaths):
 
 # Grab all .jpg images in the static/images/ folder
 def getImageList(imgPath):
-    return [os.path.basename(i) for i in glob.glob(pjoin('static','images','*.jpg'))]
+    return [os.path.basename(i) for i in glob.glob(pjoin('static','images','*.png'))]
 
 def rotate(L, n):
     return L[n:] + L[:n]

@@ -14,21 +14,27 @@ template='''
   <meta name="description" content="Bildkarusellen">
   <meta name="author" content="SitePoint">
 
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link rel= "stylesheet" type="text/css" href="{{css}}">
 
 </head>
 
-<form action="/backward/" method="post">
-    <button name="previousButton" type="submit">Left</button>
-</form>
+<div class="content">
 
-<img src="{{prevImage}}" width="200" alt="Image2"/>
-<img src="{{image}}" width="800" alt="Image2"/>
-<img src="{{nextImage}}" width="200" alt="Image2"/>
+    <h1>Rotate with flask</h1>
 
-<form action="/forward/" method="post">
-    <button name="previousButton" type="submit">Right</button>
-</form>
+    <form action="/backward/" method="post">
+        <button  class="mybut" name="previousButton" type="submit">Left</button>
+    </form>
+    
+    <img src="{{prevImage}}" width="200" alt="Image2"/>
+    <img src="{{image}}" width="800" alt="Image2"/>
+    <img src="{{nextImage}}" width="200" alt="Image2"/>
+    
+    <form action="/forward/" method="post">
+        <button  class="mybut" name="previousButton" type="submit">Right</button>
+    </form>
+
+</div>
 
 </html>
 '''

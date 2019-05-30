@@ -11,10 +11,12 @@ app = Flask(__name__)
 # Create the actual html that is sent to the client (browser)
 # It just replaces three keywords in the string defined in template.py
 def mkImgPage(imgPaths):
+    cssFile = url_for('static',filename=pjoin('css','styles.css'))
     t = Template(template)
-    page = t.render(image     = imgPaths[1], \
-                    nextImage = imgPaths[2], \
-                    prevImage = imgPaths[0])
+    page = t.render(image     = imgPaths[1],
+                    nextImage = imgPaths[2],
+                    prevImage = imgPaths[0],
+                    css = cssFile)
     return page
 
 # Grab all .jpg images in the static/images/ folder

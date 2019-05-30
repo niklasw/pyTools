@@ -15,4 +15,9 @@
 `python3 app.py`
 > Now, open a web browser and navigate to http://localhost:5000
 
+## Make available from other computers (on network)
+Change the host address in the main app (app.py) to the hosts IP.
+Set the port number to something that can be opened in the hosts firewall and
+is allowed by other policies...
+
 

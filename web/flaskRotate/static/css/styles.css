@@ -1,6 +1,6 @@
 body
 {
-    background-color:#333333;
+    background-color:#555555;
     font-family: Arial, Helvetica, sans-serif;
     margin-right: auto;
     color:#aaa;
@@ -8,53 +8,85 @@ body
 
 #content
 {
-    width:500px;
-    margin-left: 100px;
-    margin-right: auto;
-    margin-top: 20px;
-    border: 1px solid #aaa;
+    background-color: #555555;
+
+    position:absolute; /*it can be fixed too*/
+    left:0; right:0;
+    top:0; bottom:0;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    border: 10px solid #aaa;
     padding:10px;
+
+    max-width:100%;
+    max-height:100%;
+    overflow:auto;
+}
+
+button
+{
+    background-color: #333333;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#pane
+{
+    display: block;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #666666;
+}
+
+#forms
+{
+    margin: 10px auto;
+    width: 100%;
+    background-color: #111111;
+}
+
+.rbut
+{
+    float: right;
+}
+.lbut
+{
     float: left;
 }
 
-.content
+#pane img
 {
-        background-color: #555555;
-
-        position:absolute; /*it can be fixed too*/
-        left:0; right:0;
-        top:0; bottom:0;
-        margin-left: 200px;
-        margin-right: 200px;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        border: 10px solid #aaa;
-        padding:10px;
-
-        /*this to solve "the content will not be cut when the window is smaller than the content": */
-        max-width:100%;
-        max-height:100%;
-        overflow:auto;
-}
-
-.mybut
-{
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
-img
-{
+    width: 70%;
     vertical-align: middle;
 }
+
+#pane img.limg
+{
+    float: left;
+    margin-right: 50px;
+    width: 10%;
+    padding-top: 50px;
+}
+
+#pane img.rimg
+{
+    float: right;
+    width: 10%;
+    padding-top: 50px;
+}
+
 /*
 h1
 {

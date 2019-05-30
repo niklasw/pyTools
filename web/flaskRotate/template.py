@@ -18,21 +18,24 @@ template='''
 
 </head>
 
-<div class="content">
+<h1>Rotate with flask</h1>
+<div id="content">
 
-    <h1>Rotate with flask</h1>
-
-    <form action="/backward/" method="post">
-        <button  class="mybut" name="previousButton" type="submit">Left</button>
-    </form>
+    <div id="pane">
+        <img class="limg" src="{{prevImage}}" alt="{{prevImage}}"/>
+        <img class="cimg" src="{{image}}"     alt="{{image}}"/>
+        <img class="rimg" src="{{nextImage}}" alt="{{nextImage}}"/>
+    </div>
     
-    <img src="{{prevImage}}" width="200" alt="Image2"/>
-    <img src="{{image}}" width="800" alt="Image2"/>
-    <img src="{{nextImage}}" width="200" alt="Image2"/>
-    
-    <form action="/forward/" method="post">
-        <button  class="mybut" name="previousButton" type="submit">Right</button>
-    </form>
+    <div id="forms">
+        <form action="/backward/" method="post">
+            <button  class="lbut" name="previousButton" type="submit">Left</button>
+        </form>
+        
+        <form action="/forward/" method="post">
+            <button  class="rbut" name="previousButton" type="submit">Right</button>
+        </form>
+    </div>
 
 </div>
 

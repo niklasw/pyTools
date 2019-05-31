@@ -34,8 +34,8 @@ function goLeft()
 </script>
 <body onkeypress="goLeft()">
 
-<h1>Rotate with flask</h1>
-<p> Now with javascript navigation: Press "r" or "l"</p>
+<h1>Rotate with flask. {{client_ip}}</h1>
+<h3> Now with javascript navigation: Press "r" or "l"</h3>
 <div id="content">
 
     <div id="pane">

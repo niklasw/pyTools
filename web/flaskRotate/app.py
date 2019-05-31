@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import os,glob
 from os.path import join as pjoin
 from flask import Flask,url_for,request
@@ -47,6 +48,7 @@ def showPage(step=0):
     APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
     nImg0 = len(imageNames)
+    maxIndex = nImg0 - 1;
     sessionID = request.remote_addr
     i0 = 0
 
@@ -54,16 +56,15 @@ def showPage(step=0):
         sessionDict[sessionID] = {"index0":i0}
     else:
         i0 = sessionDict[sessionID]["index0"]
-        i0 = rotI(nImg0-1,i0,step)
-        sessionDict[sessionID]["index0"] = i0
-    indices = vRotI(nImg0-1,(i0,i0+1,i0+2),step)
-    print(indices,i0)
+
+    indices = vRotI(maxIndex,[i0,i0+1,i0+2],step)
+    sessionDict[sessionID]["index0"] = indices[0]
 
     imgPaths = [pjoin('images',imageNames[i]) for i in indices]
 
-    return mkImgPage([ url_for('static',filename=imgPaths[0]),
-                       url_for('static',filename=imgPaths[1]),
-                       url_for('static',filename=imgPaths[2])])
+    return mkImgPage([url_for('static',filename=imgPaths[0]),
+                      url_for('static',filename=imgPaths[1]),
+                      url_for('static',filename=imgPaths[2])])
 
 @app.route('/backward/',methods=['POST'])
 def bwdPage():

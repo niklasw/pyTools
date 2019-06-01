@@ -39,9 +39,9 @@ function goLeft()
 <div id="content">
 
     <div id="pane">
-        <img class="limg" src="{{prevImage}}" alt="{{prevImage}}"/>
-        <img class="cimg" src="{{image}}"     alt="{{image}}"/>
-        <img class="rimg" src="{{nextImage}}" alt="{{nextImage}}"/>
+        <img class="limg" src="{{images[0]}}" alt="{{images[0]}}"/>
+        <img class="cimg" src="{{images[1]}}"     alt="{{images[1]}}"/>
+        <img class="rimg" src="{{images[2]}}" alt="{{images[2]}}"/>
     </div>
     
     <div id="forms">

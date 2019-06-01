@@ -11,12 +11,10 @@ app = Flask(__name__)
 
 # Create the actual html that is sent to the client (browser)
 # It just replaces three keywords in the string defined in template.py
-def mkImgPage(imgPaths):
+def mkImgPage(imgList):
     cssFile = url_for('static',filename=pjoin('css','styles.css'))
     t = Template(template)
-    page = t.render(image     = imgPaths[1],
-                    nextImage = imgPaths[2],
-                    prevImage = imgPaths[0],
+    page = t.render(images = imgList,
                     css = cssFile,
                     client_ip = request.remote_addr)
     return page
@@ -60,11 +58,9 @@ def showPage(step=0):
     indices = vRotI(maxIndex,[i0,i0+1,i0+2],step)
     sessionDict[sessionID]["index0"] = indices[0]
 
-    imgPaths = [pjoin('images',imageNames[i]) for i in indices]
+    imgUrls = [url_for('static',filename=pjoin('images',imageNames[i])) for i in indices]
 
-    return mkImgPage([url_for('static',filename=imgPaths[0]),
-                      url_for('static',filename=imgPaths[1]),
-                      url_for('static',filename=imgPaths[2])])
+    return mkImgPage(imgUrls)
 
 @app.route('/backward/',methods=['POST'])
 def bwdPage():

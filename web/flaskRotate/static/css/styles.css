@@ -6,7 +6,6 @@ body
 {
     background-color:#555555;
     font-family: Arial, Helvetica, sans-serif;
-    margin-right: auto;
     color:#aaa;
 }
 
@@ -14,14 +13,14 @@ body
 {
     background-color: #555555;
 
-    position:absolute; /*it can be fixed too*/
+    position:absolute;
     left:0; right:0;
     top:0; bottom:0;
     margin-left: 200px;
     margin-right: 200px;
-    margin-top: 100px;
+    margin-top: 110px;
     margin-bottom: 50px;
-    border: 10px solid #aaa;
+    border: 10px solid #666666;
     padding:10px;
 
     max-width:100%;
@@ -29,28 +28,10 @@ body
     overflow:auto;
 }
 
-button
-{
-    background-color: #333333;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-
 #pane
 {
-    display: block;
     padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: auto;
-    margin-right: auto;
+    margin 10px;
     background-color: #666666;
 }
 
@@ -61,19 +42,10 @@ button
     background-color: #111111;
 }
 
-
-.rbut
+#pane img.cimg
 {
-    float: right;
-}
-.lbut
-{
-    float: left;
-}
-
-#pane img
-{
-    width: 800px;
+    margin: auto;
+    width: 65%;
     vertical-align: middle;
 }
 
@@ -108,6 +80,30 @@ button
   transition: transform .2s;
 }
 
+button
+{
+    background-color: #333333;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+.rbut
+{
+    float: right;
+}
+.lbut
+{
+    float: left;
+    clear: left;
+}
 
 /*
 h1

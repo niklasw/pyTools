@@ -30,6 +30,7 @@ body
 
 #pane
 {
+    position: relative;
     padding: 10px;
     margin 10px;
     background-color: #666666;
@@ -104,6 +105,21 @@ button
     float: left;
     clear: left;
 }
+
+a
+{
+    color: #aaa;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid #222222;
+    text-decoration: none;
+}
+
+a:hover
+{
+    background-color: #414A4A;
+}
+
 
 /*
 h1

@@ -54,6 +54,7 @@ function goLeft()
         </form>
     </div>
 </div>
+<a href="https://github.com/niklasw/pyTools/tree/master/web/flaskRotate"> Source here</a>
 </body>
 
 </html>
